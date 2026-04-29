@@ -106,7 +106,7 @@ function ComponentsSection() {
 }
 
 function ArduinoAlgorithmSection() {
-  const [expandedPhase, setExpandedPhase] = useState("SETUP")
+  const [expandedPhase, setExpandedPhase] = useState<string | null>("SETUP")
 
   return (
     <section className="py-24 bg-blue-950 px-8">

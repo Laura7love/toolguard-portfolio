@@ -143,7 +143,7 @@ function StackSection() {
 }
 
 function APISection() {
-  const [expandedRoute, setExpandedRoute] = useState(0)
+  const [expandedRoute, setExpandedRoute] = useState<number | null>(0)
 
   return (
     <section className="py-24 bg-purple-950 px-8">
