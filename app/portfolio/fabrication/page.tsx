@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { PortfolioSectionHeader, InfoCard } from "@/components/portfolio/PortfolioComponents"
-import { fabricationIterations, lessons } from "@/lib/portfolio-data"
+import { fabricationIterations, lessons, type FabricationIteration, type Lesson } from "@/lib/portfolio-data"
 
 function HeroFabrication() {
   return (
@@ -87,7 +87,7 @@ function IterationsSection() {
         />
 
         <div className="space-y-6 mt-12">
-          {fabricationIterations.map((iteration, i) => (
+          {fabricationIterations.map((iteration: FabricationIteration, i: number) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, x: -30 }}
@@ -140,7 +140,7 @@ function LessonsSection() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-          {lessons.map((lesson, i) => (
+          {lessons.map((lesson: Lesson, i: number) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
