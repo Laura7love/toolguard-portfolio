@@ -58,10 +58,10 @@ export function TrainingResults() {
             </p>
             <div className="bg-black/30 rounded-lg p-4 h-80 flex items-center justify-center">
               <Image 
-                src="/images/PR_curve.png" 
-                alt="PR Curve" 
-                width={400} 
-                height={300} 
+                src="/images/confusion_matrix_normalized.png" 
+                alt="Confusion Matrix" 
+                width={320} 
+                height={320} 
                 className="w-full h-auto"
               />
             </div>

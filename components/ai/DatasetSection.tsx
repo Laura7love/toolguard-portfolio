@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { SectionHeader, InsightCard } from "./SectionHeader"
 import { datasetStats } from "@/lib/ai-data"
@@ -51,8 +52,14 @@ export function DatasetSection() {
           <p className="text-neutral-400 text-sm mb-6">
             ⚠️ Déséquilibre intentionnel : les tournevis sont les outils les plus fréquemment empruntés.
           </p>
-          <div className="bg-neutral-800 rounded-lg p-6 h-64 flex items-center justify-center">
-            <p className="text-neutral-500 text-sm">[Histogramme des classes]</p>
+          <div className="bg-neutral-800 rounded-lg p-6 h-80 flex items-center justify-center">
+            <Image 
+              src="/images/PR_curve.png" 
+              alt="Distribution des classes - Courbe Précision-Rappel" 
+              width={500} 
+              height={320} 
+              className="w-full h-auto"
+            />
           </div>
         </motion.div>
 
