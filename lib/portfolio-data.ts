@@ -82,25 +82,25 @@ export interface Lesson {
 
 export const fabricationIterations: FabricationIteration[] = [
   {
-    phase: "🔴 Prototype 1",
-    status: "❌ Échoué — Structure trop flexible",
-    issue: "Les tiroirs présentaient des vibrations excessives lors de l'ouverture.",
-    solution: "Renforcement par profilés aluminium et ajout de guides linéaires de précision.",
-    figure: "Figure 42 — Prototype 1 vs Prototype 2"
+    phase: "Prototype 01 : Structure & Tiroirs",
+    status: "⚠️ Assemblage complexe",
+    issue: "Mauvais jeux d'assemblage sur les encoches laser et défauts de parallélisme structurel.",
+    solution: "Ajustement des paramètres Box.py pour l'adhérence seule et ajout de jeux fonctionnels sur les logements d'écrous.",
+    figure: "Figures 34 (DXF) & 35 (Proto)"
   },
   {
-    phase: "🟡 Prototype 2",
-    status: "⚠️ Partiel — Problèmes d'assemblage",
-    issue: "Les tolérances CNC étaient trop serrées (±0.05mm imposé, impossible à atteindre).",
-    solution: "Révision des tolérances à ±0.1mm, optimisation des trajectoires d'usinage.",
-    figure: "Figure 43 — Ajustement des tolérances"
+    phase: "Prototype 02 : Transmission",
+    status: "⚙️ Optimisation manuelle",
+    issue: "Désalignement moteur/vis sans fin causant des vibrations.",
+    solution: "Usinage manuel d'accouplements en aluminium et logements écrou PVC sur mesure.",
+    figure: "Figures 38-40"
   },
   {
-    phase: "✅ Version finale",
-    status: "✅ Production — Système opérationnel",
-    issue: "Pas de problème majeur : systématisation du processus de fabrication.",
-    solution: "Documentation standardisée, contrôle qualité 100% en usinage CNC.",
-    figure: "Figure 44 — Système final en production"
+    phase: "Version Finale : Intégration",
+    status: "✅ Prêt pour déploiement",
+    issue: "Baisse de performance IA due aux reflets du fond métallique.",
+    solution: "Installation d'un fond blanc polyester et nouvelle collecte d'images (Dataset v2).",
+    figure: "Figure 45 (Support caméra)"
   }
 ];
 
@@ -130,3 +130,4 @@ export const lessons: Lesson[] = [
     impact: "Consommation énergétique stable. Aucun blocage en 500+ cycles d'essai."
   }
 ];
+
