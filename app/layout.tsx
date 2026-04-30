@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar"; // Importation de ton composant Navbar
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "ToolGuard | EMINES",
-  description: "Système intelligent de gestion d'outillage",
+  description: "Solution industrielle - Optimisation et gestion d'outillage",
 };
 
 export default function RootLayout({
@@ -13,15 +14,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className="antialiased bg-white">
-        {/* La Navbar est placée ici pour être persistante sur tout le site */}
+    <html lang="fr" className="scroll-smooth">
+      <body className="antialiased bg-stone-950 text-white">
+        {/* Navigation persistante */}
         <Navbar />
         
-        {/* Le contenu de tes pages (projet, equipe, etc.) s'affiche ici */}
-        <div className="relative">
+        {/* Contenu principal */}
+        <main className="relative min-h-screen">
           {children}
-        </div>
+        </main>
+
+        {/* Footer anonymisé ToolGuard */}
+        <Footer />
       </body>
     </html>
   );

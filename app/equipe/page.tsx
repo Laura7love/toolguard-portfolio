@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { Cpu } from "lucide-react";
 
 // Icônes SVG
 const LinkedInIcon = () => (
@@ -37,6 +38,20 @@ const team = [
   { id: 12, name: "Hafsa EL ARROUCHI", cell: "Marketing", role: "Cellule Marketing", tech: "Planning", img: "/team/hafsa.png", li: "#", gh: "#" },
   { id: 13, name: "Ismail OUIAZZANE", cell: "Spéciale", role: "Même note que tout le monde", tech: "Expert", img: "/team/ismail.png", li: "#", gh: "#" },
 ];
+
+const acknowledgments = {
+  academic: [
+    "M. Abdelkarim ALAHYANE",
+    "M. Youssef DERRAZI",
+    "M. Mohammed LAHNINE",
+    "M. Anas CHERRADI",
+    "M. El Mostafa BABA"
+  ],
+  technical: [
+    { name: "Younes HABBOULI", role: "Équipe FabLab" },
+    { name: "Zine-eddine SEMMAK", role: "Équipe FabLab" }
+  ]
+};
 
 export default function EquipePage() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
@@ -75,19 +90,20 @@ export default function EquipePage() {
           <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
             <Image src="/logo-toolguard_arriere.png" alt="Logo ToolGuard" width={220} height={70} className="mx-auto mb-6 h-auto w-auto" />
             <h1 className="text-5xl font-black text-slate-900 uppercase tracking-tighter italic">
-              L&apos;Ingénierie Derrière <span className="text-[#087eaa]">ToolGuard</span>
+              L&apos;Ingénierie Derrière <span className="text-[#087eaa]">ToolGuard</span>[cite: 1]
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-slate-600 font-medium leading-relaxed italic">
               13 élèves ingénieurs, convergence de différentes expertises prêts à entreprendre. 
-              Portés par un leadership collaboratif, résolument tournés vers l&apos;innovation.
+              Portés par un leadership collaboratif, résolument tournés vers l&apos;innovation.[cite: 1]
             </p>
             <p className="mt-4 text-[#087eaa] font-black uppercase tracking-[0.3em] text-[11px]">
-              Team ToolGuard • Promotion 2027 • EMINES
+              Team ToolGuard • Promotion 2027 • EMINES[cite: 1]
             </p>
           </motion.div>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-16">
+        {/* Grille de l'équipe */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-16 mb-32">
           {team.map((member) => {
             const isHovered = hoveredId === member.id;
             const activeColor = getActiveColor(member.cell);
@@ -99,12 +115,10 @@ export default function EquipePage() {
                 onMouseLeave={() => setHoveredId(null)}
                 className="relative flex flex-col items-center"
               >
-                {/* La Carte Capsule */}
                 <motion.div 
                   className={`relative w-full max-w-[230px] pt-10 pb-8 px-4 rounded-[110px] border-2 transition-all duration-500 flex flex-col items-center
                     ${isHovered ? `${activeColor} border-transparent shadow-2xl scale-105 z-30` : 'bg-white/80 border-slate-100 shadow-sm z-20'}`}
                 >
-                  {/* BADGE ÉTIQUETTE NOIRE INCLINÉE (Visible au survol) */}
                   <AnimatePresence>
                     {isHovered && (
                       <motion.div 
@@ -113,12 +127,11 @@ export default function EquipePage() {
                         exit={{ opacity: 0, scale: 0.8 }}
                         className="absolute top-4 right-[-5px] bg-black text-white text-[8px] font-black uppercase px-2 py-1 rounded rotate-12 shadow-xl z-50"
                       >
-                        {member.tech}
+                        {member.tech}[cite: 1]
                       </motion.div>
                     )}
                   </AnimatePresence>
 
-                  {/* Image Circulaire */}
                   <div className={`relative w-28 h-28 mb-6 rounded-full overflow-hidden border-4 transition-all duration-500 shadow-lg
                     ${isHovered ? 'border-white/40 scale-110' : 'border-white'}`}>
                     <Image 
@@ -130,21 +143,19 @@ export default function EquipePage() {
                     />
                   </div>
 
-                  {/* Infos */}
                   <div className="text-center w-full px-2">
                     <span className={`text-[8px] font-black uppercase px-3 py-1 rounded-full border mb-4 inline-block
                       ${isHovered ? 'bg-white/20 border-white/20 text-white' : cellColors[member.cell]}`}>
-                      {member.cell === "Spéciale" ? "Cellule Delta" : `Cellule ${member.cell}`}
+                      {member.cell === "Spéciale" ? "Cellule Delta" : `Cellule ${member.cell}`}[cite: 1]
                     </span>
                     <h3 className={`text-[14px] font-black leading-tight mb-1 transition-colors ${isHovered ? 'text-white' : 'text-slate-900'}`}>
-                      {member.name}
+                      {member.name}[cite: 1]
                     </h3>
                     <p className={`text-[9px] font-bold uppercase tracking-wider ${isHovered ? 'text-white/70' : 'text-slate-400'}`}>
-                      {member.role}
+                      {member.role}[cite: 1]
                     </p>
                   </div>
 
-                  {/* Liens Sociaux */}
                   <div className={`flex gap-4 mt-6 pt-4 border-t w-full justify-center transition-colors ${isHovered ? 'border-white/10 text-white' : 'border-slate-50 text-slate-300'}`}>
                     <a href={member.li} target="_blank" rel="noopener noreferrer" className="hover:scale-150 transition-transform"><LinkedInIcon /></a>
                     <a href={member.gh} target="_blank" rel="noopener noreferrer" className="hover:scale-150 transition-transform"><GithubIcon /></a>
@@ -154,6 +165,59 @@ export default function EquipePage() {
             );
           })}
         </div>
+
+        {/* SECTION REMERCIEMENTS */}
+        <motion.section 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative mt-20 pt-20 border-t border-slate-100"
+        >
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-8">
+             <Cpu className="text-slate-200" size={32} />
+          </div>
+
+          <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tighter italic mb-16">
+            Expertise & <span className="text-[#087eaa]">Encadrement</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto text-left">
+            <div className="bg-slate-50/50 p-8 rounded-3xl border border-slate-100 backdrop-blur-sm">
+              <h4 className="text-[#087eaa] font-black mb-6 uppercase text-[11px] tracking-[0.3em]">
+                Encadré par
+              </h4>
+              <ul className="space-y-4">
+                {acknowledgments.academic.map((name, idx) => (
+                  <li key={idx} className="text-slate-700 font-bold text-sm flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300" />
+                    {name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-slate-50/50 p-8 rounded-3xl border border-slate-100 backdrop-blur-sm">
+              <h4 className="text-[#087eaa] font-black mb-6 uppercase text-[11px] tracking-[0.3em]">
+                Équipe FabLab
+              </h4>
+              <div className="grid grid-cols-1 gap-6">
+                {acknowledgments.technical.map((person, idx) => (
+                  <div key={idx} className="flex flex-col">
+                    <span className="text-slate-900 font-bold text-sm">{person.name}</span>
+                    <span className="text-slate-400 font-bold uppercase text-[9px] tracking-wider">
+                      {person.role}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-16 text-slate-400 text-[10px] uppercase font-black tracking-[0.4em]">
+            EMINES - School of Industrial Management • Benguerir, UM6P
+          </p>
+        </motion.section>
       </div>
     </main>
   );

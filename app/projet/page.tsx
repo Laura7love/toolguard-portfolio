@@ -159,7 +159,7 @@ export default function ProjetPage() {
               <div className="space-y-4">
                 {[
                   { qty: "1", name: "Arduino Mega 2560" },
-                  { qty: "7", name: "Moteurs Nema 17" },
+                  { qty: "4", name: "Moteurs Nema 17" },
                   { qty: "1", name: "Driver 4 axes TB6560" },
                   { qty: "1", name: "Lecteur RFID RC522" },
                   { qty: "1", name: "Caméra HD" },
@@ -179,7 +179,7 @@ export default function ProjetPage() {
               <div className="space-y-4">
                 {[
                   { qty: "8", name: "Glissières Télescopiques" },
-                  { qty: "5", name: "Vis sans fin" },
+                  { qty: "4", name: "Vis sans fin" },
                   { qty: "1", name: "Châssis Mécano-soudé" },
                   { qty: "4", name: "Tiroirs sur mesure" },
                 ].map((item, i) => (

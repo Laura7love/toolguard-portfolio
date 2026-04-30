@@ -131,3 +131,7 @@ export const lessons: Lesson[] = [
   }
 ];
 
+export const socialLinks = {
+  jelyne: "https://linkedin.com/in/jelyne-wafo"
+};
+
