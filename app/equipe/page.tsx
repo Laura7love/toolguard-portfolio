@@ -30,13 +30,13 @@ const team = [
   { id: 4, name: "Rim EL-OUARDANI", cell: "AI", role: "Responsable Data", tech: "YOLOv8", img: "/team/rim.png", li: "#", gh: "#" },
   { id: 5, name: "Halima SEMLALI", cell: "Mécanique", role: "Cellule Mécanique", tech: "MDF 10mm", img: "/team/halima.png", li: "#", gh: "#" },
   { id: 6, name: "Youssef LAABADI", cell: "Fabrication", role: "Cellule Fabrication", tech: "CNC Machining", img: "/team/youssef.png", li: "#", gh: "#" },
-  { id: 7, name: "Doha EL FERKOUSS", cell: "Informatique", role: "Cellule Informatique", tech: "API Design", img: "/team/doha.png", li: "#", gh: "#" },
+  { id: 7, name: "Doha EL FERKOUSS", cell: "Électrique", role: "Cellule Électrique", tech: "arduino", img: "/team/doha.png", li: "#", gh: "#" },
   { id: 8, name: "Oualid NASYR", cell: "Informatique", role: "Cellule Informatique", tech: "Embedded C++", img: "/team/oualid.png", li: "#", gh: "#" },
   { id: 9, name: "Walid MAIOUTE", cell: "AI", role: "Cellule AI", tech: "Deep Learning", img: "/team/walid.png", li: "#", gh: "#" },
-  { id: 10, name: "Jihane JRA", cell: "AI", role: "Cellule AI", tech: "UI/UX", img: "/team/jihane.png", li: "#", gh: "#" },
+  { id: 10, name: "Jihane JRA", cell: "AI", role: "Cellule AI", tech: "chatbot", img: "/team/jihane.png", li: "#", gh: "#" },
   { id: 11, name: "Fatima Zahra MALAININE", cell: "Marketing", role: "Cellule Marketing", tech: "Strategy", img: "/team/fatima.png", li: "#", gh: "#" },
   { id: 12, name: "Hafsa EL ARROUCHI", cell: "Marketing", role: "Cellule Marketing", tech: "Planning", img: "/team/hafsa.png", li: "#", gh: "#" },
-  { id: 13, name: "Ismail OUIAZZANE", cell: "Spéciale", role: "Même note que tout le monde", tech: "Expert", img: "/team/ismail.png", li: "#", gh: "#" },
+  { id: 13, name: "Ismail OUIAZZANE", cell: "Fabrication", role: "fab", tech: "fab", img: "/team/ismail.png", li: "#", gh: "#" },
 ];
 
 const acknowledgments = {
@@ -90,14 +90,14 @@ export default function EquipePage() {
           <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
             <Image src="/logo-toolguard_arriere.png" alt="Logo ToolGuard" width={220} height={70} className="mx-auto mb-6 h-auto w-auto" />
             <h1 className="text-5xl font-black text-slate-900 uppercase tracking-tighter italic">
-              L&apos;Ingénierie Derrière <span className="text-[#087eaa]">ToolGuard</span>[cite: 1]
+              L&apos;Ingénierie Derrière <span className="text-[#087eaa]">ToolGuard</span>
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-slate-600 font-medium leading-relaxed italic">
               13 élèves ingénieurs, convergence de différentes expertises prêts à entreprendre. 
-              Portés par un leadership collaboratif, résolument tournés vers l&apos;innovation.[cite: 1]
+              Portés par un leadership collaboratif, résolument tournés vers l&apos;innovation.
             </p>
             <p className="mt-4 text-[#087eaa] font-black uppercase tracking-[0.3em] text-[11px]">
-              Team ToolGuard • Promotion 2027 • EMINES[cite: 1]
+              Team ToolGuard • Promotion 2027 • EMINES
             </p>
           </motion.div>
         </header>
@@ -127,7 +127,7 @@ export default function EquipePage() {
                         exit={{ opacity: 0, scale: 0.8 }}
                         className="absolute top-4 right-[-5px] bg-black text-white text-[8px] font-black uppercase px-2 py-1 rounded rotate-12 shadow-xl z-50"
                       >
-                        {member.tech}[cite: 1]
+                        {member.tech}
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -146,13 +146,13 @@ export default function EquipePage() {
                   <div className="text-center w-full px-2">
                     <span className={`text-[8px] font-black uppercase px-3 py-1 rounded-full border mb-4 inline-block
                       ${isHovered ? 'bg-white/20 border-white/20 text-white' : cellColors[member.cell]}`}>
-                      {member.cell === "Spéciale" ? "Cellule Delta" : `Cellule ${member.cell}`}[cite: 1]
+                      {member.cell === "Spéciale" ? "Cellule Delta" : `Cellule ${member.cell}`}
                     </span>
                     <h3 className={`text-[14px] font-black leading-tight mb-1 transition-colors ${isHovered ? 'text-white' : 'text-slate-900'}`}>
-                      {member.name}[cite: 1]
+                      {member.name}
                     </h3>
                     <p className={`text-[9px] font-bold uppercase tracking-wider ${isHovered ? 'text-white/70' : 'text-slate-400'}`}>
-                      {member.role}[cite: 1]
+                      {member.role}
                     </p>
                   </div>
 
