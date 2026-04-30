@@ -23,7 +23,7 @@ const cellColors: { [key: string]: string } = {
 };
 
 const team = [
-  { id: 1, name: "Amina ALALGUI", cell: "Mécanique", role: "Chef de projet", tech: "SolidWorks", img: "/team/amina.png", li: "#", gh: "#" },
+  { id: 1, name: "Amina ALALGUI", cell: "Mécanique", role: "Chef de projet", tech: "SolidWorks", img: "/team/Amina.png", li: "#", gh: "#" },
   { id: 2, name: "Jelyne Laura WAFO WENDZI", cell: "Électrique", role: "Responsable Matériel", tech: "Arduino Mega", img: "/team/laura.png", li: "#", gh: "#" },
   { id: 3, name: "Douae EL GHAZAL", cell: "Informatique", role: "Responsable Santé & Sécurité", tech: "Database", img: "/team/douae.png", li: "#", gh: "#" },
   { id: 4, name: "Rim EL-OUARDANI", cell: "AI", role: "Responsable Data", tech: "YOLOv8", img: "/team/rim.png", li: "#", gh: "#" },
